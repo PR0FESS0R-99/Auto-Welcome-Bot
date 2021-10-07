@@ -92,14 +92,20 @@ Eg :- `👋Hy {first}`
 
 `API_HASH` : [Watch Tutorial Video](https://youtu.be/5eEsvLAKVc0)
 
-`ADMIN_ID` : Bot Owner Id From [@MT_Id_Bot](https://telegram.dog/MT_ID_Bot)
+`OWNER_ID` : Bot Owner Id From [@MT_Id_Bot](https://telegram.dog/MT_ID_Bot)
 
 `BOT_TOKEN` : Bot Token From @Botfather
 
-`HEROKU_NAME` : Herouk App Name
+APP_NAME : Herouk App Name
 
 `WELCOME_TEXT` : Set Custom Welcome Message 
 
+----
+----
+
+#### Credits
+
+[Muhammed Rk](https://github.com/PR0FESS0R-99/Auto-Welcome-Bot)
 
 
 
