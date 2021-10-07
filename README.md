@@ -61,7 +61,7 @@ Eg :- `👋Hy {first}`
 
 `{username}` : User User Name
 
-**Eg :-** `TH UserName @{username}`
+**Eg :-** `TG UserName @{username}`
 
 ----
 
