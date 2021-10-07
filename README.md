@@ -28,7 +28,7 @@ Maintained By [Mo Tech](https://Telegram.dog/Mo_Tech_YT)
 
 ### Demo Welcome Msg
 
-<vid src="https://telegra.ph/file/4ffc527ac9c2483e29b5c.mp4" width="100px"> 
+<mp4 src="https://telegra.ph/file/4ffc527ac9c2483e29b5c.mp4" width="100px"> 
 
 
 ----
