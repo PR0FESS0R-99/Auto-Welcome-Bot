@@ -16,7 +16,8 @@
 
 <img src="https://github.com/Mo-Tech-MRK-YT/Mo-Tech-MRK-YT/blob/main/gifs/Hi.gif" width="20px"> Hey [Mo Tech](https://Telegram.dog/Mo_Tech_Group),
 
-Iam Simple Auto Welcome Bot\n\nJest Add Me to your Chat and See My Power
+Iam Simple Auto Welcome Bot
+Jest Add Me to your Chat and See My Power
 
 /admin Bot Master Only
 
@@ -27,7 +28,7 @@ Maintained By [Mo Tech](https://Telegram.dog/Mo_Tech_YT)
 
 ### Demo Welcome Msg
 
-<img src="https://telegra.ph/file/4ffc527ac9c2483e29b5c.mp4" width="100px"> 
+<video src="https://telegra.ph/file/4ffc527ac9c2483e29b5c.mp4" width="100px"> 
 
 
 ----
