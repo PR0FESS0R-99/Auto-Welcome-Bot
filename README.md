@@ -82,10 +82,15 @@ Eg :- `👋Hy {first}`
 #### Config Vars
 
 `API_ID` : [Watch Tutorial Video](https://youtu.be/5eEsvLAKVc0)
+
 `API_HASH` : [Watch Tutorial Video](https://youtu.be/5eEsvLAKVc0)
+
 `ADMIN_ID` : Bot Owner Id From [@MT_Id_Bot](https://telegram.dog/MT_ID_Bot)
+
 `BOT_TOKEN` : Bot Token From @Botfather
+
 `HEROKU_NAME` : Herouk App Name
+
 `WELCOME_TEXT` : Set Custom Welcome Message 
 
 
