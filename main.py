@@ -12,7 +12,7 @@ Pr0fess0r_99= Client(
 @Pr0fess0r_99.on_message(filters.command("start"))
 async def start(client: Pr0fess0r_99, update):
     start_msg = "👋Hy {}, Iam Simple Auto Welcome Bot\n\nMaintained By @Mo_Tech_YT"
-    bot_username = update.bot.username
+    bot_username = await bot.get_me()
     link = "PR0FESS0R-99/Auto-Welcome-Bot"
     reply_markup = InlineKeyboardMarkup(
         [             
@@ -29,7 +29,7 @@ async def start(client: Pr0fess0r_99, update):
             [
                 InlineKeyboardButton
                    (
-                        "➕️ Add Me To Your Chats ➕️", url=f"http://t.me/{bot_username}?startgroup=botstart"
+                        "➕️ Add Me To Your Chats ➕️", url=f"http://t.me/{bot_username.username}?startgroup=botstart"
                    )
             ]
         ] 
