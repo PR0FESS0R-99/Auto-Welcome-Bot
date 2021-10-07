@@ -1,1 +1,1 @@
-worker puthon3 -m main.py
+worker: puthon3 -m main.py
