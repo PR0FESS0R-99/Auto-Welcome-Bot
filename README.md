@@ -19,7 +19,7 @@
 Iam Simple Auto Welcome Bot
 Jest Add Me to your Chat and See My Power
 
-/admin Bot Master Only
+[/admin](https://github.com/PR0FESS0R-99/Auto-Welcome-Bot/blob/dec040ea164fcbd7f6b3304e399acd8f9abd7486/main.py#L55) Bot Master Only
 
 Maintained By [Mo Tech](https://Telegram.dog/Mo_Tech_YT)
 
