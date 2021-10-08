@@ -50,7 +50,7 @@ async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
     welcome_text = f"👋Hey {mention}, Welcome To {group_name}\n\n Developed By @Mo_Tech_YT"
     welcome_msg = os.environ.get("WELCOME_TEXT", welcome_text)
     print("Welcome Message Activate")
-    await msg.reply_text(text=welcome_msg)
+    await msg.reply_text(text=f"{welcome_msg}")
 
 @Pr0fess0r_99.on_message(filters.private & filters.command("admin"))
 async def admin(bot: Pr0fess0r_99, update):
