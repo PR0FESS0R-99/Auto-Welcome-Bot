@@ -37,29 +37,6 @@ async def start(client: Pr0fess0r_99, update):
     await update.reply_text(
         text=start_msg.format(update.from_user.mention), reply_markup=reply_markup)
 
-@Pr0fess0r_99.on_message(filters.new_chat_members)
-async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
-    # from PR0FESS0R-99 import ID-Bot
-    first = msg.from_user.first_name
-    last = msg.from_user.last_name
-    mention = msg.from_user.mention
-    username = msg.from_user.username
-    id = msg.from_user.id
-    group_name = msg.chat.title
-    group_username = msg.chat.username
-    welcome_text = f"👋Hey {mention}, Welcome To {group_name}\n\n Developed By @Mo_Tech_YT"
-    welcome_msg = os.environ.get(f"WELCOME_TEXT", welcome_text)
-    print("Welcome Message Activate")
-    await msg.reply_text(text=welcome_msg.format(
-        first = msg.from_user.first_name,
-        last = msg.from_user.last_name,
-        username = None if not msg.from_user.username else '@' + msg.from_user.username,
-        mention = msg.from_user.mention,
-        id = msg.from_user.id,
-        group_name = msg.chat.title,
-        group_username = None if not msg.chat.username else '@' + msg.chat.username
-   )
-
 @Pr0fess0r_99.on_message(filters.private & filters.command("admin"))
 async def admin(bot: Pr0fess0r_99, update):
     # Heroku Support
@@ -92,7 +69,31 @@ async def admin(bot: Pr0fess0r_99, update):
         await update.reply_text(text=user.format(update.from_user.mention), reply_markup=deploy)
         return
     await update.reply_text(text=user_admin, reply_markup=reply_markup)
-   
+
+
+@Pr0fess0r_99.on_message(filters.new_chat_members)
+async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
+    # from PR0FESS0R-99 import ID-Bot
+    first = msg.from_user.first_name
+    last = msg.from_user.last_name
+    mention = msg.from_user.mention
+    username = msg.from_user.username
+    id = msg.from_user.id
+    group_name = msg.chat.title
+    group_username = msg.chat.username
+    welcome_text = f"👋Hey {mention}, Welcome To {group_name}\n\n Developed By @Mo_Tech_YT"
+    welcome_msg = os.environ.get(f"WELCOME_TEXT", welcome_text)
+    print("Welcome Message Activate")
+    await msg.reply_text(text=welcome_msg.format(
+        first = msg.from_user.first_name,
+        last = msg.from_user.last_name,
+        username = None if not msg.from_user.username else '@' + msg.from_user.username,
+        mention = msg.from_user.mention,
+        id = msg.from_user.id,
+        group_name = msg.chat.title,
+        group_username = None if not msg.chat.username else '@' + msg.chat.username
+   )
+
 print("""Auto Welcome Bot Started
 
 Maintained By @Mo_Tech_YT""")
