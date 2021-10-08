@@ -81,7 +81,7 @@ async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
     group_name = msg.chat.title
     group_username = msg.chat.username
     welcome_text = f"👋Hey {mention}, Welcome To {group_name}\n\n Developed By @Mo_Tech_YT"
-    welcome_msg = os.environ.get(f"WELCOME_TEXT", welcome_text)
+    WELCOME_TEXT = os.environ.get(f"WELCOME_TEXT", welcome_text)
     print("Welcome Message Activate")
     await msg.reply_text(text=WELCOME_TEXT.format(
         first = msg.from_user.first_name,
