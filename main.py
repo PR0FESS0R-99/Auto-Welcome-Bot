@@ -94,6 +94,5 @@ async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
         group_username = None if not msg.chat.username else '@' + msg.chat.username
     )
 
-print("""Auto Welcome Bot Started Maintained By @Mo_Tech_YT""")
 
 Pr0fess0r_99.run()
