@@ -92,7 +92,7 @@ async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
         id = msg.from_user.id,
         group_name = msg.chat.title,
         group_username = None if not msg.chat.username else '@' + msg.chat.username
-   )
+    )
 
 print("""Auto Welcome Bot Started
 
