@@ -70,7 +70,6 @@ async def admin(bot: Pr0fess0r_99, update):
         return
     await update.reply_text(text=user_admin, reply_markup=reply_markup)
 
-
 @Pr0fess0r_99.on_message(filters.new_chat_members)
 async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
     # from PR0FESS0R-99 import ID-Bot
@@ -80,6 +79,4 @@ async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
     await msg.reply_text(text=welcome_msg.format(
         first = msg.from_user.first_name
     )
-
-
 Pr0fess0r_99.run()
