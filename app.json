@@ -34,7 +34,7 @@
         },
         "HOSTED": {
             "description": "Check readme.md file for more details (true)",
-            "value: "",
+            "value": "",
             "required": false
         },
         "OWNER_ID": {
@@ -48,17 +48,17 @@
         },
         "WELCOME_BUTTON": {
             "description": "Check readme.md file for more details (true)",
-            "value: "",
+            "value": "",
             "required": false
         },
         "WELCOME_BUTTON_LINK": {
             "description": "give your [private or Public] Channel or Group Link || you must use https://t.me or t.me Dont use @",
-            "value: "",
+            "value": "",
             "required": false
         },
         "WELCOME_BUTTON_NAME": {
             "description": "Give the button a name (eg:-JOIN NOW)",
-            "value: "",
+            "value": "",
             "required": false
         }
     },
