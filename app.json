@@ -4,7 +4,10 @@
     "logo": "https://telegra.ph/file/c4a3eea0c20318b6d88b6.jpg",
     "keywords": [
         "Telegram",
-        "Id",
+        "Custom",
+        "Adv",
+        "Auto",
+        "Welcome", 
         "Bot"
     ],
     "website": "https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ",
@@ -29,6 +32,11 @@
             "description": "Your Bot Token From @BotFather",
             "value": ""
         },
+        "HOSTED": {
+            "description": "Check readme.md file for more details (true)",
+            "value: "",
+            "required": false
+        },
         "OWNER_ID": {
             "description": "Your Bot Token From @MT_ID_Bot",
             "value": ""
@@ -36,6 +44,21 @@
         "WELCOME_TEXT": {
             "description": "Set Your Welcome Text More Information Check Out Readme.md",
             "value": "",
+            "required": false
+        },
+        "WELCOME_BUTTON": {
+            "description": "Check readme.md file for more details (true)",
+            "value: "",
+            "required": false
+        },
+        "WELCOME_BUTTON_LINK": {
+            "description": "give your [private or Public] Channel or Group Link || you must use https://t.me or t.me Dont use @",
+            "value: "",
+            "required": false
+        },
+        "WELCOME_BUTTON_NAME": {
+            "description": "Give the button a name (eg:-JOIN NOW)",
+            "value: "",
             "required": false
         }
     },
