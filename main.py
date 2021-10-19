@@ -11,7 +11,7 @@ Pr0fess0r_99= Client(
 
 @Pr0fess0r_99.on_message(filters.command("start"))
 async def start(client: Pr0fess0r_99, update):
-    start_msg = "👋Hy {}, Iam Simple Auto Welcome Bot\n\nMaintained By @Mo_Tech_YT"
+    start_msg = "👋Hy {}, Iam Simple Auto Welcome Bot\n\nBot Owner Only /admin\n\nMaintained By @Mo_Tech_YT"
     bot_username = await client.get_me()
     link = "PR0FESS0R-99/Auto-Welcome-Bot"
     reply_markup = InlineKeyboardMarkup(
@@ -37,15 +37,17 @@ async def start(client: Pr0fess0r_99, update):
     await update.reply_text(
         text=start_msg.format(update.from_user.mention), reply_markup=reply_markup)
 
+
+
 @Pr0fess0r_99.on_message(filters.private & filters.command("admin"))
 async def admin(bot: Pr0fess0r_99, update):
     # Heroku Support
-    user_admin = "Open Heroku => Application => Settings => Config Vars => Welcome_Text Edit"
     user = "👋Hey {}, \n You are not the deploy of this bot"
     run = "PR0FESS0R-99/Auto-Welcome-Bot" # https://github.com/PR0FESS0R-99/Auto-Welcome-Bot
-    api_key = os.environ.get("APP_NAME", "")
-    OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "").split()) 
-    reply_markup=InlineKeyboardMarkup(
+    api_key = os.environ.get("APP_NAME", "AutoWelcomeBot")
+    DEPLOY = bool(os.environ.get("HOSTED"))
+    if not DEPLOY:
+       reply_markup=InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton
@@ -55,6 +57,21 @@ async def admin(bot: Pr0fess0r_99, update):
             ]
         ]
     )
+    else:
+       reply_markup=InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton
+                    (
+                        "⚙️RAILWAY APP⚙️, url="https://railway.app/"
+                    )
+            ]
+        ]
+    )
+    if not DEPLOY:
+       user_admin = "Open Heroku => Application => Settings => Config Vars => Welcome_Text Edit"
+    else:
+       user_admin = "Open Railway Website=> Application => Variables => Welcome_Text Edit"
     deploy =InlineKeyboardMarkup(
         [
             [
@@ -65,7 +82,7 @@ async def admin(bot: Pr0fess0r_99, update):
             ]
         ]
     )
-    if update.from_user.id not in OWNER_ID:
+    if update.from_user.id not in Config.OWNER_ID:
         await update.reply_text(text=user.format(update.from_user.mention), reply_markup=deploy)
         return
     await update.reply_text(text=user_admin, reply_markup=reply_markup)
@@ -80,7 +97,25 @@ async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
     id = msg.from_user.id
     group_name = msg.chat.title
     group_username = msg.chat.username
-    welcome_text = f"👋Hey {mention}, Welcome To {group_name}\n\n Developed By @Mo_Tech_YT"
+    name_button = "🔰 JOIN NOW 🔰"
+    link_button = "t.me/Mo_tech_YT"
+    button_name = os.environ.get("WELCOME_BUTTON_NAME", name_button)
+    button_link = os.environ.get("WELCOME_BUTTON_LINK", link_button)
+    BUTTON = bool(os.environ.get("WELCOME_BUTTON"))
+    if not BUTTON:
+       welcome_text = f"👋Hey {mention}, Welcome To {group_name}\n\n Developed By @Mo_Tech_YT"
+    else:
+       welcome_text = f"👋Hey {mention}, Welcome To {group_name}\n\n Developed By @Mo_Tech_YT"
+       reply_markup=InlineKeyboardMarkup(
+           [
+               [
+                   InlineKeyboardButton
+                       (
+                           button_name, url=button_link
+                       )
+               ]  
+           ]
+       )
     WELCOME_TEXT = os.environ.get("WELCOME_TEXT", welcome_text)
     print("Welcome Message Activate")
     await msg.reply_text(text=WELCOME_TEXT.format(
@@ -91,10 +126,11 @@ async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
         id = msg.from_user.id,
         group_name = msg.chat.title,
         group_username = None if not msg.chat.username else '@' + msg.chat.username
-    )
+        )
+   )
 
 
-)
+
 
 print("""Auto Welcome Bot Started
 
