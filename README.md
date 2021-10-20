@@ -99,19 +99,27 @@ Eg :- `👋Hy {first}`
 
 `API_HASH` : [Watch Tutorial Video](https://youtu.be/5eEsvLAKVc0)
 
-`OWNER_ID` : Bot Owner Id From [@MT_Id_Bot](https://telegram.dog/MT_ID_Bot)
+`APP_NAME` : (Herouk or Railway) App Name
 
 `BOT_TOKEN` : Bot Token From @Botfather
 
-APP_NAME : Herouk App Name
+`HOSTED` : If you want to deploy in tha Heroku, do not enter anything, If you want to deploy in the Railway app, enter `True`
+
+`OWNER_ID` : Bot Owner Id From [@MT_Id_Bot](https://telegram.dog/MT_ID_Bot)
 
 `WELCOME_TEXT` : Set Custom Welcome Message 
 
+`WELCOME_BUTTON` : If you need a button in the welcome message, type `true`. Do not type anything if not needed
+
+`WELCOME_BUTTON_NAME` : WELCOME_BUTTON Is True, Then the name you like Enter WELCOME_BUTTON_NAME there
+
+`WELCOME_BUTTON_LINK` : give your [private or Public] Channel or Group Link || you must use https://t.me or t.me Dont use @
 ----
 ----
 
 #### Credits
 
+[Pyrogram](https://github.com/pyrogram/pyrogram)
 [Muhammed Rk](https://github.com/PR0FESS0R-99/Auto-Welcome-Bot)
 
 
