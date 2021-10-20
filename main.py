@@ -46,6 +46,7 @@ async def admin(bot: Pr0fess0r_99, update):
     run = "PR0FESS0R-99/Auto-Welcome-Bot" # https://github.com/PR0FESS0R-99/Auto-Welcome-Bot
     api_key = os.environ.get("APP_NAME", "AutoWelcomeBot")
     DEPLOY = bool(os.environ.get("HOSTED"))
+    OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "").split())
     if not DEPLOY:
        reply_markup=InlineKeyboardMarkup(
         [
@@ -82,7 +83,7 @@ async def admin(bot: Pr0fess0r_99, update):
             ]
         ]
     )
-    if update.from_user.id not in Config.OWNER_ID:
+    if update.from_user.id not in OWNER_ID:
         await update.reply_text(text=user.format(update.from_user.mention), reply_markup=deploy)
         return
     await update.reply_text(text=user_admin, reply_markup=reply_markup)
@@ -101,35 +102,42 @@ async def auto_welcome(bot: Pr0fess0r_99, msg: Message):
     link_button = "t.me/Mo_tech_YT"
     button_name = os.environ.get("WELCOME_BUTTON_NAME", name_button)
     button_link = os.environ.get("WELCOME_BUTTON_LINK", link_button)
-    BUTTON = bool(os.environ.get("WELCOME_BUTTON"))
-    if not BUTTON:
-       welcome_text = f"👋Hey {mention}, Welcome To {group_name}\n\n Developed By @Mo_Tech_YT"
-    else:
-       welcome_text = f"👋Hey {mention}, Welcome To {group_name}\n\n Developed By @Mo_Tech_YT"
-       reply_markup=InlineKeyboardMarkup(
-           [
-               [
-                   InlineKeyboardButton
-                       (
-                           button_name, url=button_link
-                       )
-               ]  
-           ]
-       )
+    welcome_text = f"Hey {mention}\nWelcome To {group_name}"
     WELCOME_TEXT = os.environ.get("WELCOME_TEXT", welcome_text)
     print("Welcome Message Activate")
-    await msg.reply_text(text=WELCOME_TEXT.format(
-        first = msg.from_user.first_name,
-        last = msg.from_user.last_name,
-        username = None if not msg.from_user.username else '@' + msg.from_user.username,
-        mention = msg.from_user.mention,
-        id = msg.from_user.id,
-        group_name = msg.chat.title,
-        group_username = None if not msg.chat.username else '@' + msg.chat.username
-        )
-   )
-
-
+    BUTTON = bool(os.environ.get("WELCOME_BUTTON"))
+    if not BUTTON:
+       await msg.reply_text(text=WELCOME_TEXT.format(
+           first = msg.from_user.first_name,
+           last = msg.from_user.last_name,
+           username = None if not msg.from_user.username else '@' + msg.from_user.username,
+           mention = msg.from_user.mention,
+           id = msg.from_user.id,
+           group_name = msg.chat.title,
+           group_username = None if not msg.chat.username else '@' + msg.chat.username
+          )
+       )
+    else:
+       await msg.reply_text(text=WELCOME_TEXT.format(
+           first = msg.from_user.first_name,
+           last = msg.from_user.last_name,
+           username = None if not msg.from_user.username else '@' + msg.from_user.username,
+           mention = msg.from_user.mention,
+           id = msg.from_user.id,
+           group_name = msg.chat.title,
+           group_username = None if not msg.chat.username else '@' + msg.chat.username
+          ),
+       reply_markup=InlineKeyboardMarkup(
+               [
+                   [
+                       InlineKeyboardButton
+                           (
+                               button_name, url=button_link
+                           )
+                   ]  
+               ]
+           )
+       )  
 
 
 print("""Auto Welcome Bot Started
