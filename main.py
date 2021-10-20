@@ -63,7 +63,7 @@ async def admin(bot: Pr0fess0r_99, update):
             [
                 InlineKeyboardButton
                     (
-                        "⚙️RAILWAY APP⚙️, url="https://railway.app/"
+                        "⚙️RAILWAY APP⚙️", url="https://railway.app/"
                     )
             ]
         ]
