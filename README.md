@@ -114,6 +114,7 @@ Eg :- `👋Hy {first}`
 `WELCOME_BUTTON_NAME` : WELCOME_BUTTON Is True, Then the name you like Enter WELCOME_BUTTON_NAME there
 
 `WELCOME_BUTTON_LINK` : give your [private or Public] Channel or Group Link || you must use https://t.me or t.me Dont use @
+
 ----
 ----
 
