@@ -43,7 +43,7 @@ async def start(client: Pr0fess0r_99, update):
 async def admin(bot: Pr0fess0r_99, update):
     # Heroku Support
     user = "👋Hey {}, \n You are not the deploy of this bot"
-    run = "PR0FESS0R-99/Auto-Welcome-Bot" # https://github.com/PR0FESS0R-99/Auto-Welcome-Bot
+    run = "WxJ3G7NBb4c" # https://github.com/PR0FESS0R-99/Auto-Welcome-Bot
     api_key = os.environ.get("APP_NAME", "AutoWelcomeBot")
     DEPLOY = bool(os.environ.get("HOSTED"))
     OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "").split())
@@ -78,7 +78,7 @@ async def admin(bot: Pr0fess0r_99, update):
             [
                 InlineKeyboardButton
                     (
-                        "💫 DEPLOY NOW 💫", url=f"https://heroku.com/deploy?template=https://github.com/{run}/tree/main"
+                        "💫 DEPLOY NOW 💫", url=f"https://youtu.be/{run}"
                     )
             ]
         ]
