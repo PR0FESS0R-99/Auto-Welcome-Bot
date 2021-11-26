@@ -42,7 +42,7 @@ async def start(client: Pr0fess0r_99, update):
 @Pr0fess0r_99.on_message(filters.private & filters.command("admin"))
 async def admin(bot: Pr0fess0r_99, update):
     # Heroku Support
-    user = "👋Hey {}, \n You are not the deploy of this bot"
+    user = "👋Hey {}, \n You are not the owner or else the admin of this bot"
     run = "WxJ3G7NBb4c" # https://github.com/PR0FESS0R-99/Auto-Welcome-Bot
     api_key = os.environ.get("APP_NAME", "AutoWelcomeBot")
     DEPLOY = bool(os.environ.get("HOSTED"))
