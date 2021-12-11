@@ -41,12 +41,10 @@ async def start(client: Pr0fess0r_99, update):
 
 @Pr0fess0r_99.on_message(filters.private & filters.command("admin"))
 async def admin(bot: Pr0fess0r_99, update):
-    # Heroku Support
-    user = "👋Hey {}, \n You are not the deploy of this bot"
     run = "WxJ3G7NBb4c" # https://github.com/PR0FESS0R-99/Auto-Welcome-Bot
     api_key = os.environ.get("APP_NAME", "AutoWelcomeBot")
     DEPLOY = bool(os.environ.get("HOSTED"))
-    OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "").split())
+    OWNER_ID = {int(x) for x in os.environ.get("OWNER_ID", "").split()}
     if not DEPLOY:
        reply_markup=InlineKeyboardMarkup(
         [
@@ -84,6 +82,8 @@ async def admin(bot: Pr0fess0r_99, update):
         ]
     )
     if update.from_user.id not in OWNER_ID:
+        # Heroku Support
+        user = "👋Hey {}, \n You are not the deploy of this bot"
         await update.reply_text(text=user.format(update.from_user.mention), reply_markup=deploy)
         return
     await update.reply_text(text=user_admin, reply_markup=reply_markup)
